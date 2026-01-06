@@ -1,5 +1,6 @@
 import React from "react";
 import { Menu, Search, CloudSun } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const currentDate = new Date().toLocaleString("en-US", {
@@ -9,7 +10,13 @@ const Navbar: React.FC = () => {
     day: "numeric",
   });
 
-  const navLinks = ["Home", "Flagged News", "Verify", "About Us", "Contact Us"];
+  const navLinks = [
+    { name: "হোম", path: "/" },
+    { name: "Flagged News", path: "/flagged" },
+    { name: "Verify", path: "/verify" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact Us", path: "/contact" },
+  ];
 
   return (
     <header className="w-full bg-white border-b border-gray-200 font-sans">
@@ -43,13 +50,13 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-center border-t border-gray-100 pt-3">
           <ul className="flex flex-wrap items-center justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar">
             {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link}`}
+              <li key={link.path}>
+                <Link
+                  to={link.path}
                   className="text-[15px] font-medium text-gray-800 hover:text-blue-700 whitespace-nowrap transition-colors"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
