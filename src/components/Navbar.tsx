@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: "হোম", path: "/" },
     { name: "Flagged News", path: "/flagged" },
-    { name: "Verify", path: "/verify" },
-    { name: "About Us", path: "/about" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "ভেরিফাই", path: "/verify" },
+    { name: "আমাদের সম্পর্কে জানুন", path: "/about" },
+    { name: "যোগাযোগ করুন", path: "/contact" },
   ];
 
   return (

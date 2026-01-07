@@ -2,17 +2,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
-
-export interface FactResult {
-  claim: string;
-  status: "True" | "False" | "Unverified";
-}
+import VerifyPage from "./components/Verify/VerifyPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/verify" element={<VerifyPage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
