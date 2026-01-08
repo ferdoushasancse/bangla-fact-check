@@ -1,8 +1,7 @@
-import React from "react";
 import { Menu, Search, CloudSun } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const currentDate = new Date().toLocaleString("en-US", {
     weekday: "long",
     year: "numeric",
@@ -12,7 +11,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "হোম", path: "/" },
-    { name: "Flagged News", path: "/flagged" },
+    { name: "ফ্ল্যাগড নিউস", path: "/flagged" },
     { name: "ভেরিফাই", path: "/verify" },
     { name: "আমাদের সম্পর্কে জানুন", path: "/about" },
     { name: "যোগাযোগ করুন", path: "/contact" },

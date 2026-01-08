@@ -4,10 +4,9 @@ import MainComponent from "./MainComponent";
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    // Handle logic here
   };
 
   return (

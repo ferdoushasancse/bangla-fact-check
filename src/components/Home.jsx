@@ -7,9 +7,9 @@ import {
   Clock,
   History,
 } from "lucide-react";
-import MainComponent from "../MainComponent";
+import MainComponent from "./MainComponent";
 
-const VerifyPage: React.FC = () => {
+const Home = () => {
   const [inputText, setInputText] = useState("");
 
   const recentClaims = [
@@ -192,4 +192,4 @@ const VerifyPage: React.FC = () => {
   );
 };
 
-export default VerifyPage;
+export default Home;
